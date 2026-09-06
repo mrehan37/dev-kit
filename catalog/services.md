@@ -78,7 +78,7 @@ the cost model to the user before selecting one.
 - **When to use:** Custom-styled interactive maps; store locators; delivery/tracking; anything needing geocoding or routing.
 - **When NOT to use:** A single static map image or pin (an embed or static image API is enough); when the org is standardized on Google Maps data/places.
 - **Works with:** Any frontend; React wrappers (react-map-gl); tile providers for MapLibre.
-- **Cost / licensing:** Mapbox: free monthly quota then usage-based per load/request. MapLibre: open-source (BSD), but you still pay a tile host unless self-serving.
+- **Cost / licensing:** Mapbox: free monthly quota then usage-based per load/request. MapLibre: open-source (BSD), but you still pay a tile host unless self-hosting.
 - **Maintenance / status:** Both stable and actively maintained.
 - **Alternatives:** Google Maps Platform (best places/geocoding data, familiar UX, usage-based), Leaflet (simple raster maps, huge plugin ecosystem), OpenStreetMap tiles, Radar (location + geofencing).
 - **Docs:** https://docs.mapbox.com · https://maplibre.org
@@ -143,4 +143,4 @@ the cost model to the user before selecting one.
 - **Maintenance / status:** Stable, actively maintained.
 - **Alternatives:** Rollbar / Bugsnag (similar), Highlight.io (open-source, session replay focus), Axiom / Better Stack (logs + uptime), console logging + a log drain (minimal).
 - **Docs:** https://docs.sentry.io
-- **Notes for chef:** Treat error monitoring as part of the baseline for any app going to production (see `standards/quality-baseline.md`). Wire up releases and source maps or the stack traces are far less useful.
+- **Notes for chef:** Treat error monitoring as part of the baseline for any app going to production (see `../standards/quality-baseline.md`). Wire up releases and source maps or the stack traces are far less useful.

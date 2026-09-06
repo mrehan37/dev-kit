@@ -5,11 +5,13 @@ Adapt length to the project. Delete sections that genuinely do not apply.
 Human-readable explanation first in every section; technical detail after.
 -->
 
-# Recipe: <project name>
+# Recipe: <project name — working title, confirmed at scaffold>
 
 **Prepared for:** <who / what they asked for>
 **Date:** <date>
 **Assumed technical level:** non-technical | somewhat technical | technical
+**Stack decision path:** chef chooses | user has full stack | user has some |
+existing codebase | resources only | no custom build
 **Status:** proposed — awaiting approval
 
 ---
@@ -30,15 +32,16 @@ outcome it delivers.>
 ## 3. The stack
 
 <Grouped by purpose. One line each: what it is for — why this choice — cost note.
- Mark [researched — not yet in catalog] and [experimental / thinly maintained]
- where they apply.>
+ Tag each: [user choice] / [from existing codebase] / [chef recommendation] /
+ [researched — not yet in catalog]. Also mark [experimental / thinly maintained]
+ where it applies. Researched items get a full entry in the appendix, not here.>
 
-- **Framework:** <name> — <why> — <cost>
-- **Hosting:** <name> — <why> — <cost>
-- **Database:** <name> — <why> — <cost>
-- **Authentication:** <name> — <why> — <cost>
-- **<Other capability>:** <name> — <why> — <cost>
-- **Tooling:** <lint/format, tests, CI> — <why>
+- **Framework:** <name> — <why> — <cost> — [tag]
+- **Hosting:** <name> — <why> — <cost> — [tag]
+- **Database:** <name> — <why> — <cost> — [tag]
+- **Authentication:** <name> — <why> — <cost> — [tag]
+- **<Other capability>:** <name> — <why> — <cost> — [tag]
+- **Tooling:** <lint/format, tests, CI> — <why> — [tag]
 
 ## 4. Key decisions & trade-offs
 
@@ -91,3 +94,21 @@ usage-based pieces.>
 
 Reply **approved** to create the project, or tell me what to change. Nothing is
 created until you approve.
+
+---
+
+## Appendix: researched options
+
+<Full entry (catalog field set) for anything in the stack tagged
+[researched — not yet in catalog]. Delete this section if there were none.
+After the project is built, these are handed to warehouse-feedback for the
+catalog.>
+
+### <Name>   (researched <date>, not yet in catalog)
+- **Type / Category:** …
+- **What it is / Problem it solves:** …
+- **When to use / When NOT to use:** …
+- **Works with / Cost / licensing / Maintenance:** …
+- **Alternatives:** …
+- **Docs:** <official URL>
+- **Notes for chef:** …

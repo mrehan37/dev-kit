@@ -66,7 +66,7 @@ library, and add animation only where it earns its place.
 - **Maintenance / status:** Stable, actively maintained (maintainer: Matt Perry).
 - **Alternatives:** GSAP (imperative, timeline-based, framework-agnostic, best for complex sequenced/scroll animation), AutoAnimate (one-line list/layout transitions), CSS transitions (no dependency), React Spring.
 - **Docs:** https://motion.dev/docs
-- **Notes for chef:** If you see `framer-motion` in older code/tutorials, it is the same library — use the `motion` package for new work. Respect `prefers-reduced-motion` (see `standards/quality-baseline.md`); do not add entrance animations just because this is installed.
+- **Notes for chef:** If you see `framer-motion` in older code/tutorials, it is the same library — use the `motion` package for new work. Respect `prefers-reduced-motion` (see `../standards/quality-baseline.md`); do not add entrance animations just because this is installed.
 
 ### GSAP
 - **Type:** library

@@ -36,15 +36,25 @@ Devkit does not treat everything as "a technology". Every entry carries a **Type
 | `template` / `boilerplate` | A starting project structure |
 | `reference` | Authoritative documentation or specification worth citing |
 | `standard` | A best-practice rule set (lives in `standards/`, indexed here when useful) |
+| `tooling` | A CLI or dev-time tool that is not a runtime dependency (Biome, gitleaks) |
+| `pattern` | A recommended way of doing something, not a single product (env-var handling) |
+
+`Type` is a short label, not a fixed enum — use the closest term(s) above; a
+compound like `service + API` or `library / tooling` is fine when it genuinely
+spans two.
 
 ## Entry format
 
 Keep entries compact and consistent. Human-readable explanation first, technical
-detail after.
+detail after. The fields below are a **checklist, not a rigid form**: always
+include Type, Category, What it is, Problem it solves, When to use, and When NOT
+to use. Omit a field that genuinely does not apply (e.g. no `Docs` for a broad
+pattern, no `Alternatives` when there is no real competition) rather than writing
+"N/A".
 
 ```
 ### <Name>
-- **Type:** framework | library | package | service | API | MCP | AI skill | template | reference | standard
+- **Type:** <label(s) from the list above>
 - **Category:** <short area label>
 - **What it is:** <plain language, one or two sentences>
 - **Problem it solves:** <the job it does>

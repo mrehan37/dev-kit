@@ -142,7 +142,7 @@ Cursor rules, etc.); the value is portable even when the packaging is not.
 - **When NOT to use:** Projects with an established brand/design system (follow that instead); backends, CLIs, and internal tools where visual polish is not the point; when a designer is already providing specs/Figma.
 - **Works with:** Claude Code (plugin/marketplace install), and other assistants that can load skill files; output targets web (HTML+Tailwind, React, Vue), mobile, and cross-platform.
 - **Cost / licensing:** Free, open-source; community-maintained (not from Anthropic or a framework team).
-- **Maintenance / status:** Actively maintained and popular; treat as a useful opinionated aid, not an authority — verify its choices against the project's real constraints and `standards/quality-baseline.md`.
+- **Maintenance / status:** Actively maintained and popular; treat as a useful opinionated aid, not an authority — verify its choices against the project's real constraints and `../standards/quality-baseline.md`.
 - **Alternatives:** An assistant's built-in design/"frontend" skill where available; a real design system or component kit (shadcn/ui + a chosen theme); a human designer.
 - **Docs:** https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 - **Notes for chef:** Objective verdict — worth keeping in the catalog as a design aid for greenfield UI work. Use it to propose a design direction for the user to approve; do not let it override an existing brand or add visual complexity the project does not need.

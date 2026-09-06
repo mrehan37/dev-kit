@@ -2,7 +2,7 @@
 
 Testing, validation, type checking, linting/formatting, security, SEO,
 accessibility, and performance. These support the cascade in
-`standards/quality-baseline.md`: they are defaults applied where relevant, not
+`../standards/quality-baseline.md`: they are defaults applied where relevant, not
 mandatory for every project.
 
 ---
@@ -154,7 +154,7 @@ mandatory for every project.
 - **Maintenance / status:** Stable, actively maintained.
 - **Alternatives:** WebPageTest (deep performance analysis), PageSpeed Insights (field + lab data), Unlighthouse (site-wide Lighthouse crawl), WAVE.
 - **Docs:** https://developer.chrome.com/docs/lighthouse · https://www.deque.com/axe
-- **Notes for chef:** For public sites, treat SEO metadata (title, description, Open Graph), a sitemap, `robots.txt`, semantic headings, and a passing axe run as baseline (see `standards/quality-baseline.md`). Automated a11y catches maybe half of issues — still do a manual keyboard pass on key flows.
+- **Notes for chef:** For public sites, treat SEO metadata (title, description, Open Graph), a sitemap, `robots.txt`, semantic headings, and a passing axe run as baseline (see `../standards/quality-baseline.md`). Automated a11y catches maybe half of issues — still do a manual keyboard pass on key flows.
 
 ### Structured data (Schema.org / JSON-LD)
 - **Type:** reference / standard

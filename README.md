@@ -2,6 +2,21 @@
 
 Devkit is an intended knowledge system for helping people turn an idea into a well-reasoned software project; it keeps a **warehouse** of reusable ingredients. It exists so the **chef** (your AI assistant - Codex, Claude, or any other; Devkit does not assume a specific one) can reuse reliable knowledge and proven building blocks without forcing users to choose technologies or understand implementation details before their needs are clear.
 
+## Start here
+
+Clone this repo somewhere local, then point your AI assistant at it. A prompt like:
+
+> Read the Devkit warehouse at `<path to your clone>` — start with `README.md`,
+> then follow the pipeline in `skills/` in order (project-intake →
+> capability-mapping → gap-research → recipe → scaffold-project). I want to build:
+> **`<describe what you want, in plain language>`**. Ask me questions as the
+> skills direct, inspect the `catalog/` before looking elsewhere, and don't
+> scaffold anything until I approve a recipe.
+
+If you only want resources (MCPs, AI skills, templates, UI/UX, references) rather
+than a whole project, say so — the chef will scope the conversation to that and
+leave your stack alone.
+
 ## Metaphor
 
 - **Warehouse** — this repository; the shared store of reusable ingredients.
@@ -36,7 +51,8 @@ follows in order:
 | Build it | [`skills/scaffold-project.md`](skills/scaffold-project.md) + [`templates/project-docs.md`](templates/project-docs.md) | A scaffolded, documented project |
 | Grow the warehouse | [`skills/warehouse-feedback.md`](skills/warehouse-feedback.md) | Vetted additions/corrections to the warehouse |
 
-The warehouse (catalog + skills + templates + standards) is the reusable part.
+The warehouse (catalog + skills + templates + MCPs + services + references +
+standards) is the reusable part.
 The recipe and the finished project are project-specific and live with the
 project, not here.
 
@@ -85,3 +101,25 @@ The chef should begin with the user's goals, explain concepts in human-friendly 
 Before proposing a recipe, the chef should search the warehouse, evaluate each relevant ingredient against the actual requirements, and research externally only to fill genuine gaps. Finding an ingredient does not make it necessary: the chef must select deliberately and must not install or combine everything it discovers.
 
 The warehouse is supporting material, not an authority that replaces judgment. Every recipe remains specific to the user's problem, requires explicit approval, and must be understandable before implementation begins.
+
+## Devkit recommends; it does not dictate
+
+The chef first establishes what the user has already decided and how much of the
+decision they want to own (see [`skills/project-intake.md`](skills/project-intake.md),
+step 2b): they may have a full stack in mind, part of one, none, or an existing
+codebase — or they may only want resources around a stack they have already
+chosen. Selection then follows a fixed order of authority
+([`skills/capability-mapping.md`](skills/capability-mapping.md)):
+
+1. Explicit user requirements
+2. Existing project / codebase constraints
+3. The user's chosen technology stack
+4. Organization / project standards
+5. Devkit recommendations (catalog + standards)
+6. Current official documentation / research
+7. The chef's own recommendation
+
+A user's or a codebase's technology choice is **never** replaced just because the
+catalog holds a different or newer option. If such a choice has a real technical,
+compatibility, security, maintenance, or fit problem, the chef names the problem
+and the reason first — the decision still belongs to the user.

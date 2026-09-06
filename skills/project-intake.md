@@ -7,8 +7,9 @@ enough to draft a recipe.
 **Use when:** someone asks the chef to build, create, or scaffold a new project,
 or describes a product/idea they want made.
 
-**Do not use for:** changes to an existing codebase, bug fixes, code questions, or
-requests that are already a precise engineering task.
+**Do not use for:** bug fixes, code questions, or requests that are already a
+precise engineering task. (An *existing codebase* the user wants extended is in
+scope — see step 2b, path 4.)
 
 **Comes before:** capability mapping and recipe generation (later phases).
 **Feeds:** the "Understanding" summary in step 6, which the recipe is built from.
@@ -28,7 +29,7 @@ requests that are already a precise engineering task.
    there is money; reminder questions only if there is scheduling; and so on.
 6. **Do not ask what a sensible default already answers.** Baseline quality
    (responsive, accessible, sensible errors/loading states — see
-   `standards/quality-baseline.md`) is stated, not offered as optional.
+   `../standards/quality-baseline.md`) is stated, not offered as optional.
 7. **Small batches.** 2–4 questions at a time on one theme, not a form.
 
 ---
@@ -58,6 +59,56 @@ Read it from how they speak; never quiz them.
 | Technical | Names stacks, hosting, constraints, trade-offs | Go straight to constraints, existing systems, must-use / must-avoid choices, scale, non-negotiables. |
 
 Treat the level as a dial you keep adjusting, not a fixed label.
+
+## Step 2b — Establish what the user already has, wants, and has decided
+
+This is core discovery philosophy, not one throwaway question. **Devkit
+recommends; it does not dictate.** Before recommending any technology, find out
+what the user has already decided and how much of the decision they want to own.
+
+Ask naturally, at a natural point — for a non-technical user this may be as light
+as *"Do you have any preferences for how this is built, or shall I choose?"*; for
+a technical user, *"Do you already have a stack in mind, or want me to recommend
+one?"* Never force this on a user who plainly does not care about the tooling.
+
+Route to one of these paths (a user can be a mix):
+
+1. **"I have a stack in mind."** Ask what it is. Treat every named choice as a
+   **user requirement** and build around it. Only challenge a choice when there is
+   a real technical, compatibility, security, maintenance, or project-fit
+   problem — and then explain the reason *before* suggesting an alternative,
+   leaving the decision with the user.
+2. **"I know some of it."** Preserve what they have chosen. Recommend only the
+   missing pieces.
+3. **"I don't know / you choose."** The chef evaluates the requirements, inspects
+   the warehouse, researches current options if needed, and recommends a stack
+   with reasons.
+4. **"I already have a project/codebase."** Treat it as the source of truth.
+   Inspect it (languages, framework, dependencies, architecture, conventions).
+   Preserve its established choices unless the user explicitly asks to change
+   them. New work matches what is there.
+
+### Scope of help requested
+
+A knowledgeable user may not want architecture help at all — e.g. *"I know what
+I'm building and my stack; I just need MCPs and AI skills."* Recognise this and
+**do not redesign their stack.** Establish which kinds of help they want, through
+conversation rather than a rigid menu:
+
+- Technology / architecture
+- AI skills · MCPs · libraries/dependencies
+- UI/UX resources · APIs / third-party services
+- Templates / boilerplates · deployment / DevOps
+- Research / references
+- All of the above
+
+Record the chosen scope; later stages only work within it.
+
+### Could this need no custom build at all?
+
+If an existing hosted product would meet the need with little or no code (e.g. a
+booking product, a form builder, a no-code site), say so. "Recommend a product,
+build nothing" is a valid outcome — carry it into the recipe as the proposal.
 
 ## Step 3 — Progressive questioning
 
@@ -119,10 +170,16 @@ recipe:
 
 - **Problem and desired outcome** — plain language
 - **Assumed technical level**
+- **Stack decision path** — which of the step 2b paths applies (has a stack /
+  knows some / chef chooses / existing codebase), and the choices already fixed
+- **Scope of help requested** — what kinds of help are in scope (from step 2b)
+- **Existing codebase** — if any: location and the established choices to preserve
 - **In scope** — the capabilities the project needs
 - **Out of scope for v1**
 - **Decisions the user made** — with their choice
 - **Decisions deferred to the chef** — each with the default that will be assumed
+- **Rough scale / cost drivers** — expected users/volume and anything that will
+  drive a usage-based bill (needed for the recipe's cost estimate); mark unknowns
 - **Open risks / unknowns**
 
 On confirmation, proceed to capability mapping and recipe generation. On
@@ -142,6 +199,11 @@ correction, revise and re-present.
 - Silently defaulting a decision that materially changes cost or scope instead of
   surfacing it
 - Naming frameworks or hosting before the problem is understood
+- Reconsidering or redesigning a stack the user has already chosen, or that an
+  existing codebase already sets, without a real problem to point to
+- Pushing architecture help on a user who only asked for resources (MCPs, skills,
+  templates, …)
+- Recommending a custom build when a hosted product would clearly do
 
 ---
 
@@ -156,6 +218,10 @@ that right?"
 
 **Chef (step 2):** treats the user as non-technical — outcome language, no tech
 nouns.
+
+**Chef (step 2b):** "Do you have any preference for how it's built, or shall I
+choose the tools and explain them simply?" → User: *"You choose."* → path 3
+(chef chooses); scope of help = whole project.
 
 **Chef (step 3, batch 1 — the shape):**
 - "Roughly how many barbers' calendars need to be bookable — just you, or a few

@@ -2,7 +2,7 @@
 
 This seed is a starting point that should grow and change as real projects are built. It offers guidance, not a mandate: **default does not mean mandatory**.
 
-Codex considers global defaults first, then project-type defaults, project-specific requirements, and finally exceptions or overrides. Each later level takes precedence over the levels before it.
+The chef considers global defaults first, then project-type defaults, project-specific requirements, and finally exceptions or overrides. Each later level takes precedence over the levels before it.
 
 ## User-facing interfaces (candidates)
 
@@ -38,4 +38,4 @@ Codex considers global defaults first, then project-type defaults, project-speci
 - Testing, type-checking, and linting where appropriate
 - ...and similar concerns
 
-None of these are automatically required; Codex selects what fits the project, and the user can override that selection.
+None of these are automatically required; the chef selects what fits the project, and the user can override that selection.

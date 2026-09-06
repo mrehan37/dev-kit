@@ -9,6 +9,18 @@ documentation another developer or AI can pick up.
 
 **Template:** [`../templates/project-docs.md`](../templates/project-docs.md).
 
+**What this produces:** a wired, documented **foundation** — each chosen
+ingredient installed, configured, and proven with one touchpoint — not a finished
+product. Building out features against the recipe is the *implementation* work
+that follows (normal development with the chef, iterating with the user).
+[`warehouse-feedback.md`](warehouse-feedback.md) runs after that.
+
+**If the recipe's decision path is "existing codebase":** this is *integration*,
+not creation — skip steps 1–2, work in the existing repo, match its conventions,
+add only the new capabilities, and still do steps 3–6 for the new parts.
+**If the recipe's outcome is "no custom build":** there is nothing to scaffold —
+hand over the product recommendation and setup guidance instead.
+
 ---
 
 ## Step 1 — Location and name (ask now, not before)
@@ -16,7 +28,8 @@ documentation another developer or AI can pick up.
 - Ask **where** to create the project (absolute path).
 - Check the target: empty directory (good), existing files (confirm what happens),
   inside an existing repo (confirm intent).
-- Confirm the exact project name (package name, repo name).
+- Confirm the exact project name (package name, repo name) — the recipe carried a
+  working title; this is where it is fixed.
 
 ## Step 2 — Scaffold with official tooling
 
@@ -76,7 +89,7 @@ Fill [`../templates/project-docs.md`](../templates/project-docs.md) into
 - Scaffolding before explicit recipe approval
 - Asking for the location before the recipe is approved
 - Committing a real `.env` or any secret
-- Hand-rolling a project skeleton a official create-tool would produce
+- Hand-rolling a project skeleton an official create-tool would produce
 - Building product features beyond a proven wiring touchpoint
 - Leaving the project without run/deploy docs
 - Not copying the approved recipe into the project

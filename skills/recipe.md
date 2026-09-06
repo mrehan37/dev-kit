@@ -4,8 +4,14 @@
 implementation plan, explained in the user's language, and get **explicit
 approval** before any project is created.
 
-**Use when:** [`capability-mapping.md`](capability-mapping.md) has produced a
-Selection (and any gaps are resolved via [`gap-research.md`](gap-research.md)).
+**Inputs:** the confirmed **Understanding** from
+[`project-intake.md`](project-intake.md) (outcome, technical level, scope,
+assumptions, non-goals, scale) **and** the **Selection** from
+[`capability-mapping.md`](capability-mapping.md) (chosen ingredients, cost
+roll-up, any researched-option appendix from
+[`gap-research.md`](gap-research.md)).
+
+**Use when:** both inputs exist and any gaps are resolved.
 
 **Feeds:** [`scaffold-project.md`](scaffold-project.md) — but only after the user
 approves.
@@ -39,9 +45,10 @@ ships inside the generated project (`docs/recipe.md`).
 1. **Summary** — what we will build, restating the outcome in the user's words.
 2. **How it will work** — the shape of the system at the user's level.
 3. **The stack** — grouped by purpose (framework, data, auth, payments, …), each
-   item one line: what it is for + why this one + cost note. Mark anything
+   item **one line**: what it is for + why this one + cost note. Mark anything
    researched / not yet in the catalog, and anything experimental or thinly
-   maintained.
+   maintained. A researched option's full detail goes in an appendix, not inline.
+   Note which choices came from the user or an existing codebase (not the chef).
 4. **Key decisions & trade-offs** — only the handful that matter. Each: what we
    chose, what else was considered, why. Include any conflict between a
    user-prescribed choice and the requirements, flagged here rather than
@@ -76,3 +83,6 @@ ships inside the generated project (`docs/recipe.md`).
 - Omitting cost, or stating cost only as "usage-based" with no figure
 - Scaffolding before explicit approval
 - Recommending a stack that fights the user's stated constraints without saying so
+- Presenting a user-chosen or codebase-set technology as if the chef selected it
+- Pasting a full researched-option block into the stack instead of one line + an
+  appendix entry

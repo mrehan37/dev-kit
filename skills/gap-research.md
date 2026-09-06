@@ -8,7 +8,8 @@ draft a catalog entry for later.
 fitting catalogued ingredient, or the only fit is niche / experimental /
 deprecated / stale.
 
-**Feeds:** recipe generation now; the catalog later (via
+**Feeds:** the Selection in [`capability-mapping.md`](capability-mapping.md) now
+(which then feeds the recipe); the catalog later (via
 [`warehouse-feedback.md`](warehouse-feedback.md)).
 
 ---
@@ -33,8 +34,9 @@ deprecated / stale.
 
 ## Output
 
-For each gap, a block in the catalog entry format, marked as researched and not
-yet catalogued:
+For each gap, a block in the **same field set as a catalog entry** (see
+[`../catalog/README.md`](../catalog/README.md)), marked as researched and not yet
+catalogued:
 
 ```
 ### <Name>   (researched <date>, not yet in catalog)
@@ -42,18 +44,25 @@ yet catalogued:
 - **Category:** …
 - **What it is:** …
 - **Problem it solves:** …
-- **When to use / When NOT to use:** …
+- **When to use:** …
+- **When NOT to use:** …
 - **Works with:** …
 - **Cost / licensing:** …
 - **Maintenance / status:** … (note any risk plainly)
-- **Alternatives considered:** … (with the deciding factor)
+- **Alternatives:** … (with the deciding factor)
 - **Docs:** <official URL>
 - **Notes for chef:** …
 ```
 
-This block goes straight into the recipe's stack section. After the project is
-approved and built, hand the vetted entry to `warehouse-feedback.md` to add it to
-the catalog.
+Then:
+
+1. Add the chosen option as a row in the capability-mapping **Selection** table
+   (Source: researched) and add its cost to the cost roll-up.
+2. Keep the full block as an appendix to the Selection; the recipe's stack
+   section cites it in one line and links to it (the recipe keeps stack items to
+   one line each).
+3. After the project is approved and built, hand the vetted block to
+   `warehouse-feedback.md` to add it to the catalog.
 
 ---
 
