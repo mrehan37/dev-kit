@@ -22,6 +22,24 @@ The warehouse holds **ingredients**, not finished recipes. A user describes what
 6. Only after approval, ask where the project should be created and scaffold it there.
 7. Document the finished project well enough that another developer or AI can understand what was built, how it works, and why key decisions were made.
 
+## The pipeline
+
+Each stage above is a written procedure in [`skills/`](skills/) that the chef
+follows in order:
+
+| Stage | Skill | Output |
+|---|---|---|
+| Understand the request | [`skills/project-intake.md`](skills/project-intake.md) | A confirmed *Understanding* of the problem and scope |
+| Choose ingredients | [`skills/capability-mapping.md`](skills/capability-mapping.md) | A *Selection* of ingredients from the [`catalog/`](catalog/), with reasoning |
+| Fill gaps | [`skills/gap-research.md`](skills/gap-research.md) | Researched options for capabilities the catalog does not cover |
+| Propose the plan | [`skills/recipe.md`](skills/recipe.md) + [`templates/recipe.md`](templates/recipe.md) | A *recipe* the user must explicitly approve |
+| Build it | [`skills/scaffold-project.md`](skills/scaffold-project.md) + [`templates/project-docs.md`](templates/project-docs.md) | A scaffolded, documented project |
+| Grow the warehouse | [`skills/warehouse-feedback.md`](skills/warehouse-feedback.md) | Vetted additions/corrections to the warehouse |
+
+The warehouse (catalog + skills + templates + standards) is the reusable part.
+The recipe and the finished project are project-specific and live with the
+project, not here.
+
 ## What belongs here
 
 The warehouse may contain reusable knowledge, references, templates, skills, MCPs, service information, dependency guidance, standards, and carefully chosen examples. These should be broadly useful across real projects and maintained close to the work that proves their value.
