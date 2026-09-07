@@ -124,3 +124,10 @@ A user's or a codebase's technology choice is **never** replaced just because th
 catalog holds a different or newer option. If such a choice has a real technical,
 compatibility, security, maintenance, or fit problem, the chef names the problem
 and the reason first — the decision still belongs to the user.
+
+## Contributing
+
+See [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md) for how to propose or
+change an ingredient, [`.github/CODE_OF_CONDUCT.md`](.github/CODE_OF_CONDUCT.md)
+for community expectations, and [`.github/SECURITY.md`](.github/SECURITY.md) for
+reporting security issues. Devkit is released under the [MIT License](LICENSE).
