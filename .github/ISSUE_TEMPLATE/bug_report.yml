@@ -1,0 +1,38 @@
+name: Problem with an ingredient or the pipeline
+description: Report something inaccurate, unclear, out of date, or broken in the warehouse.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the warehouse trustworthy. For **security** issues
+        (committed secrets, malicious sources) do not file here — see
+        [SECURITY.md](../blob/main/SECURITY.md).
+  - type: input
+    id: location
+    attributes:
+      label: Where is the problem?
+      description: File path, link, or the pipeline stage affected.
+      placeholder: skills/capability-mapping.md, or references/...
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+      description: What does it currently say or do, and why is that a problem?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it say or do instead?
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: How did you hit this?
+      description: What were you (or the chef) trying to do when the problem showed up?
+    validations:
+      required: false

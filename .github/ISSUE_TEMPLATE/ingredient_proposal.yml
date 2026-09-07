@@ -1,0 +1,63 @@
+name: Propose a new ingredient
+description: Suggest a template, skill, MCP, service, reference, or standard to add to the warehouse.
+labels: ["ingredient proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The warehouse grows from real, proven need — not speculation. Please
+        show that this ingredient has been reusable across actual work. See
+        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md#adding-an-ingredient).
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - template
+        - skill
+        - mcp
+        - service
+        - reference
+        - standard
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Proposed name
+      placeholder: e.g. "background-jobs" standard
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is it?
+      description: Describe the ingredient in plain language.
+    validations:
+      required: true
+  - type: textarea
+    id: when
+    attributes:
+      label: When should the chef use it, and when should it not?
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: What real need showed this is reusable?
+      description: Which project(s) or situations proved its value?
+    validations:
+      required: true
+  - type: textarea
+    id: existing
+    attributes:
+      label: Why doesn't an existing ingredient cover this?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Authoritative sources and caveats
+      description: Links, plus any assumptions, compatibility limits, or maintenance needs.
+    validations:
+      required: false
