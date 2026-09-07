@@ -7,7 +7,7 @@ body:
       value: |
         The warehouse grows from real, proven need — not speculation. Please
         show that this ingredient has been reusable across actual work. See
-        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md#adding-an-ingredient).
+        [CONTRIBUTING.md](../CONTRIBUTING.md#adding-an-ingredient).
   - type: dropdown
     id: category
     attributes:

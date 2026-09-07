@@ -76,4 +76,4 @@ Do not open a public issue for a security problem. See
 ## License
 
 By contributing, you agree that your contributions will be licensed under the
-[MIT License](LICENSE) that covers this project.
+[MIT License](../LICENSE) that covers this project.

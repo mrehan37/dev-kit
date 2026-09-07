@@ -7,7 +7,7 @@ body:
       value: |
         Thanks for helping keep the warehouse trustworthy. For **security** issues
         (committed secrets, malicious sources) do not file here — see
-        [SECURITY.md](../blob/main/SECURITY.md).
+        [SECURITY.md](../SECURITY.md).
   - type: input
     id: location
     attributes:
