@@ -6,13 +6,14 @@ Devkit is an intended knowledge system for helping people turn an idea into a we
 
 Clone this repo somewhere local, then point your AI assistant at it. A prompt like:
 
-> Read the Devkit warehouse at `<path to your clone>` — start with `README.md`,
-> then follow the pipeline in `skills/` in order (project-intake →
-> capability-mapping → gap-research → recipe → scaffold-project). I want to build:
-> **`<describe what you want, in plain language>`**. Ask me questions as the
-> skills direct, inspect the `catalog/` before looking elsewhere, and don't
-> scaffold anything until I approve a recipe.
-
+``` prompt
+Read the Devkit warehouse at `<path to your clone>` — start with `README.md`,
+then follow the pipeline in `skills/` in order (project-intake →
+capability-mapping → gap-research → recipe → scaffold-project). I want to build:
+**`<describe what you want, in plain language>`**. Ask me questions as the
+skills direct, inspect the `catalog/` before looking elsewhere, and don't
+scaffold anything until I approve a recipe.
+```
 If you only want resources (MCPs, AI skills, templates, UI/UX, references) rather
 than a whole project, say so — the chef will scope the conversation to that and
 leave your stack alone.
